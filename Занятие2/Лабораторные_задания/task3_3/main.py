@@ -1,6 +1,9 @@
-def header_footer():  # TODO написать декоратор
-    ...
-
+def header_footer(decorate):  # TODO написать декоратор
+    def wrapper():
+        print("========")
+        decorate()
+        print("========")
+    return wrapper
 
 @header_footer
 def my_func():
